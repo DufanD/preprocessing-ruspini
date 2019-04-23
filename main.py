@@ -22,6 +22,8 @@ with open('data/data_ruspini_missing.csv', 'r') as csvFile:
         ruspini_missing.append(row)
 csvFile.close()
 
+print(ruspini_missing)
+
 for i, itemi in enumerate(ruspini_missing):
     for j, itemj in enumerate(ruspini_missing[i]):
         if(itemj == '?'):
@@ -29,5 +31,6 @@ for i, itemi in enumerate(ruspini_missing):
         else:
             ruspini_missing[i][j] = float(itemj)
 
+new_ruspini = impy.fast_knn(np.array(ruspini_missing))
 print(ruspini_missing)
-print(impy.mean(np.array(ruspini_missing)))
+print(new_ruspini)
