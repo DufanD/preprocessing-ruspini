@@ -16,17 +16,17 @@ print(new_ruspini)
 new_ruspini = pd.DataFrame(
     {'x': new_ruspini[:, 0], 'y': new_ruspini[:, 1], 'label': new_ruspini[:, 2]})
 
-plt.figure(1)
+plt.figure('Ruspini Missing')
 plt.subplot(111)
 plt.scatter(df['x'].values, df['y'].values,
-            c=df['label'].values, label='ruspini missing')
+            c=df['label'].values)
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.legend(loc='upper left')
 
-plt.figure(2)
+plt.figure('New Ruspini')
 plt.scatter(new_ruspini['x'].values,
-            new_ruspini['y'].values, c=df['label'].values+1, label='new ruspini')
+            new_ruspini['y'].values, c=new_ruspini['label'].values)
 
 plt.xlabel('X')
 plt.ylabel('Y')
