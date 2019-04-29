@@ -27,16 +27,12 @@ new_ruspini = pd.DataFrame({
 })
 
 plt.figure('Ruspini Missing')
-plt.scatter(ruspini_missing['x'].values,
-            ruspini_missing['y'].values,
-            c=ruspini_missing['label'].values)
+plt.scatter(ruspini_missing['x'].values, ruspini_missing['y'].values)
 plt.xlabel('X')
 plt.ylabel('Y')
 
 plt.figure('New Ruspini')
-plt.scatter(new_ruspini['x'].values,
-            new_ruspini['y'].values,
-            c=new_ruspini['label'].values)
+plt.scatter(new_ruspini['x'].values, new_ruspini['y'].values)
 
 plt.xlabel('X')
 plt.ylabel('Y')
