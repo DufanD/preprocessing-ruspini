@@ -10,7 +10,7 @@ ruspini_missing = pd.read_csv('data/data_ruspini_missing.csv')
 ruspini_missing = ruspini_missing.replace('?', np.nan)
 ruspini_missing = np.array(ruspini_missing, dtype=float)
 
-new_ruspini = impy.fast_knn(ruspini_missing)
+new_ruspini = impy.fast_knn(ruspini_missing, k=3)
 ruspini_missing = pd.DataFrame({
     'x': ruspini_missing[:, 0],
     'y': ruspini_missing[:, 1],
@@ -25,8 +25,6 @@ new_ruspini = pd.DataFrame({
     'y': new_ruspini[:, 1],
     'label': new_ruspini[:, 2]
 })
-
-colors = ['red', 'green', 'blue', 'white']
 
 plt.figure('Ruspini Missing')
 plt.scatter(ruspini_missing['x'].values,
