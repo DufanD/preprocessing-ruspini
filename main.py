@@ -61,7 +61,7 @@ plt.ylabel('Y')
 plt.figure('New Ruspini')
 plt.scatter(new_ruspini['x'].values,
             new_ruspini['y'].values,
-            c=ruspini_missing['label'].values)
+            c=new_ruspini['label'].values)
 
 plt.xlabel('X')
 plt.ylabel('Y')
